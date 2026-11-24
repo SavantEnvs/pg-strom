@@ -1,0 +1,8 @@
+project: savantenvs/pg-strom
+target: tsv2arrow
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tsv2arrow/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/tsv2arrow -o out.arrow -S a:int32,b:text,c:float8,d:date,e:bool,f:time,g:timestamp,h:int16,i:float2,j:uint64,k:utf8-large @@
+    timeout: 5

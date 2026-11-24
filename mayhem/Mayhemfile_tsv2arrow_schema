@@ -1,0 +1,8 @@
+project: savantenvs/pg-strom
+target: tsv2arrow_schema
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tsv2arrow_schema/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/tsv2arrow --schema-from-input -o out.arrow @@
+    timeout: 5

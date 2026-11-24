@@ -1,0 +1,8 @@
+project: savantenvs/pg-strom
+target: arrow2csv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/arrow2csv/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/arrow2csv --create-table=t @@
+    timeout: 5

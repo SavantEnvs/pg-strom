@@ -1,0 +1,8 @@
+project: savantenvs/pg-strom
+target: tsv2arrow_parquet
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tsv2arrow_parquet/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/tsv2arrow --parquet -o out.parquet -S a:int32,b:text,c:float8,d:date,e:bool,f:time,g:timestamp,h:int16,j:uint64 @@
+    timeout: 5

@@ -1,0 +1,8 @@
+project: savantenvs/pg-strom
+target: vcf2arrow
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vcf2arrow/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/vcf2arrow -f -o out.arrow @@
+    timeout: 5

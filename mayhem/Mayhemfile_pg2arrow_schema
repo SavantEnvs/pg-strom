@@ -1,0 +1,8 @@
+project: savantenvs/pg-strom
+target: pg2arrow_schema
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pg2arrow_schema/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build-fuzz/pg2arrow --schema @@
+    timeout: 5

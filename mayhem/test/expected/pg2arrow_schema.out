@@ -1,0 +1,19 @@
+---
+--- DDL generated from [mayhem/pg2arrow_schema/testsuite/vcf.arrow]
+---
+CREATE TABLE vcf (
+    chrom  text,
+    pos  int4,
+    id  text,
+    ref  text,
+    alt  text,
+    qual  float4,
+    filter  text,
+    "info__DP"  int4,
+    "info__AF"  float4,
+    "info__DB"  bool,
+    "sample1__GT"  text,
+    "sample1__GQ"  int4,
+    "sample2__GT"  text,
+    "sample2__GQ"  int4
+);
